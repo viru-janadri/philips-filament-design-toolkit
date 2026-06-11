@@ -1,5 +1,5 @@
 {
-  "name": "filament-ds",
+  "name": "philips-filament-design-toolkit",
   "version": "1.0.0",
   "description": "Philips Filament Design System — component mapping, implementation, icon lookup, and prop discovery for React apps using @filament/react",
   "author": {

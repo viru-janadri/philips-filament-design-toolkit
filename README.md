@@ -1,4 +1,4 @@
-# filament-ds
+# philips-filament-design-toolkit
 
 Claude Code plugin for the **Philips Filament Design System** (`@filament/react`).
 
@@ -7,7 +7,7 @@ Provides component mapping, implementation guidance, icon lookup, prop discovery
 ## Installation
 
 ```bash
-claude plugin add viru-janadri/filament-ds
+claude plugin add viru-janadri/philips-filament-design-toolkit
 ```
 
 ## Skills

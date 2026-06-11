@@ -1,6 +1,6 @@
 ---
-name: filament-ds
-description: "Philips Filament Design System plugin — maps designs to components, implements production React code, looks up props/icons, scaffolds new projects, auto-generates component catalogs, and reviews code for correct Filament usage. Contains skills: filament-ui, filament-implement, filament-lookup, filament-init, filament-catalog. Contains agent: filament-reviewer."
+name: philips-filament-design-toolkit
+description: "Philips Filament Design System toolkit — maps designs to components, implements production React code, looks up props/icons, scaffolds new projects, auto-generates component catalogs, and reviews code for correct Filament usage. Contains skills: filament-ui, filament-implement, filament-lookup, filament-init, filament-catalog. Contains agent: filament-reviewer."
 ---
 
 # Philips Filament Design System Plugin
