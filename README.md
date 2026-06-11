@@ -46,6 +46,23 @@ node_modules/@filament/*-react/        — 72 component packages
 node_modules/@filament-icons/react/    — 1066 icons
 ```
 
+## NPM Registry Setup
+
+Filament packages are hosted on the Philips HSDP Artifactory. Add this `.npmrc` to your project root:
+
+```ini
+@filament:registry=https://artifactory.hsdp.io/artifactory/api/npm/filament-npm/
+@filament-icons:registry=https://artifactory.hsdp.io/artifactory/api/npm/filament-npm/
+@filament-react:registry=https://artifactory.hsdp.io/artifactory/api/npm/filament-npm/
+@filament-theme:registry=https://artifactory.hsdp.io/artifactory/api/npm/filament-npm/
+always-auth=true
+```
+
+For local development, add your auth token (do not commit):
+```ini
+//artifactory.hsdp.io/artifactory/api/npm/filament-npm/:_authToken=${HSDP_TOKEN}
+```
+
 ## License
 
 Proprietary - Philips internal use only.

@@ -1,5 +1,19 @@
 # Project-Specific Filament Patterns
 
+## NPM Registry
+
+Filament packages are hosted on Philips HSDP Artifactory. Required `.npmrc` scopes:
+
+```ini
+@filament:registry=https://artifactory.hsdp.io/artifactory/api/npm/filament-npm/
+@filament-icons:registry=https://artifactory.hsdp.io/artifactory/api/npm/filament-npm/
+@filament-react:registry=https://artifactory.hsdp.io/artifactory/api/npm/filament-npm/
+@filament-theme:registry=https://artifactory.hsdp.io/artifactory/api/npm/filament-npm/
+always-auth=true
+```
+
+Auth token (local dev only, never commit): `//artifactory.hsdp.io/artifactory/api/npm/filament-npm/:_authToken=${HSDP_TOKEN}`
+
 ## ix-sdc-simulator patterns
 
 Based on how this codebase uses Filament:
