@@ -1,0 +1,23 @@
+{
+  "name": "filament-ds",
+  "version": "1.0.0",
+  "description": "Philips Filament Design System — component mapping, implementation, icon lookup, and prop discovery for React apps using @filament/react",
+  "author": {
+    "name": "Viru Janadri",
+    "email": "virupakshappa.lnu@philips.com"
+  },
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Write|Edit",
+        "hooks": [
+          {
+            "type": "prompt",
+            "prompt": "Check if $ARGUMENTS contains a .tsx or .jsx file edit. If so, verify: (1) All @filament/react imports use the barrel import pattern, not individual package paths like @filament/button-react. (2) All @filament-icons/react imports use PascalCase named exports. (3) No generic HTML elements (like <button>, <input>, <select>) are used where a Filament equivalent exists (Button, TextField, Dropdown). Return ok:true if the file is not tsx/jsx OR if all checks pass. Return ok:false with reason if a Filament import or usage pattern is wrong.",
+            "statusMessage": "Checking Filament patterns..."
+          }
+        ]
+      }
+    ]
+  }
+}
