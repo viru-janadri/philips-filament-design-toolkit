@@ -17,6 +17,8 @@ claude plugin add viru-janadri/filament-ds
 | `/filament-ui` | Map designs/screenshots to Filament components | Design image, "which component for X" |
 | `/filament-implement` | Full production implementation with patterns | "implement", "build", "create this page" |
 | `/filament-lookup` | Quick prop/icon/API lookup | "what props does X have", "find icon for" |
+| `/filament-init` | Scaffold Filament into a new/existing project | "set up filament", "init filament" |
+| `/filament-catalog` | Auto-generate component catalog from installed packages | "update catalog", "scan filament components" |
 
 ## Agent
 

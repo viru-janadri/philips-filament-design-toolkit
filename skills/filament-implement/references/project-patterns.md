@@ -1,4 +1,4 @@
-# Project-Specific Filament Patterns
+# Filament Project Patterns
 
 ## NPM Registry
 
@@ -14,24 +14,27 @@ always-auth=true
 
 Auth token (local dev only, never commit): `//artifactory.hsdp.io/artifactory/api/npm/filament-npm/:_authToken=${HSDP_TOKEN}`
 
-## ix-sdc-simulator patterns
-
-Based on how this codebase uses Filament:
+## Common Patterns
 
 ### Dialog pattern
 ```tsx
-// See src/components/AboutDialog/AboutDialog.tsx
-import { Button, Dialog, DialogContainer, DialogTitle, Heading, Paragraph, Text, Link } from '@filament/react';
-import { PhilipsShield, InformationCircle } from '@filament-icons/react';
+import { Button, Dialog, DialogContainer, DialogTitle, DialogContent, DialogActions, Heading, Text } from '@filament/react';
+import { InformationCircle } from '@filament-icons/react';
 ```
 
 ### DataGrid pattern
 ```tsx
-// See src/components/Logs/LogsDashboard.tsx
 import { DataGrid, DataGridHeader, Heading, Pagination, Table, TableHeader, TableBody, Column, Row, Cell } from '@filament/react';
 ```
 
-### Component folder structure
+### Notification pattern
+```tsx
+import { NotificationsQueue, Notification, NotificationHeader, NotificationContent } from '@filament/react';
+import { CheckmarkCircleFill, WarningFill } from '@filament-icons/react';
+```
+
+## Recommended Component Folder Structure
+
 ```
 src/components/
   ComponentName/
@@ -41,22 +44,24 @@ src/components/
     index.ts                   # Re-export
 ```
 
-### State management
-- Local state with `useState` / `useReducer` for component-level state
-- React Context for cross-component state (e.g., simulator configuration)
-- No external state library
+## Testing Patterns
 
-### Testing patterns
 - React Testing Library
 - `@testing-library/user-event` for interactions
 - Test Filament components by their accessible roles and labels
 - Don't test internal Filament component state
 
-### CSS approach
-- CSS Modules for component-specific styles
+## CSS Approach
+
 - Filament provides its own styling — avoid overriding with custom CSS
 - Use Filament's `FlexBox` for layout rather than custom flexbox CSS
-- Theme comes from Filament's `@filament/themes`
+- CSS Modules for any component-specific styles beyond what Filament provides
+- Theme via `@filament/react/themes` (blue, light, medium are common defaults)
 
-### Common wrappers
-Check if the project has common wrappers around Filament components (e.g., a preconfigured `ConfirmDialog`, `FormField` wrapper, etc.) before creating new ones.
+## Before Implementing
+
+Always check the current project for:
+1. Existing wrappers around Filament components (e.g., a preconfigured `ConfirmDialog`, `FormField` wrapper)
+2. How the project already uses the component you're about to add (grep for existing imports)
+3. Project-specific state management patterns (Redux, Context, Zustand, etc.)
+4. The project's folder/naming conventions

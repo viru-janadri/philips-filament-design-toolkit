@@ -1,6 +1,6 @@
 ---
 name: filament-ds
-description: "Philips Filament Design System plugin — maps designs to components, implements production React code, looks up props/icons, and reviews code for correct Filament usage. Contains skills: filament-ui (design mapping), filament-implement (full implementation), filament-lookup (API/icon lookup). Contains agent: filament-reviewer (code review for Filament patterns)."
+description: "Philips Filament Design System plugin — maps designs to components, implements production React code, looks up props/icons, scaffolds new projects, auto-generates component catalogs, and reviews code for correct Filament usage. Contains skills: filament-ui, filament-implement, filament-lookup, filament-init, filament-catalog. Contains agent: filament-reviewer."
 ---
 
 # Philips Filament Design System Plugin
@@ -14,6 +14,8 @@ This plugin provides comprehensive support for building UIs with the Philips Fil
 | `/filament-ui` | Map designs/screenshots to Filament components | Design image, "which component", "convert this design" |
 | `/filament-implement` | Full production implementation with patterns | "implement", "build", "create this page" |
 | `/filament-lookup` | Quick prop/icon/API lookup | "what props", "find icon", "how to use" |
+| `/filament-init` | Scaffold Filament into a new/existing project | "set up filament", "init filament", "add filament" |
+| `/filament-catalog` | Auto-generate component catalog from installed packages | "update catalog", "refresh components", "scan filament" |
 
 ## Available Agents
 
