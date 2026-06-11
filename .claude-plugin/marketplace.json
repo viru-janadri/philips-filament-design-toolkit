@@ -1,0 +1,14 @@
+{
+  "name": "philips-filament-design-toolkit",
+  "description": "Philips Filament Design System toolkit for Claude Code",
+  "owner": {
+    "name": "Viru Janadri"
+  },
+  "plugins": [
+    {
+      "name": "philips-filament-design-toolkit",
+      "source": "./",
+      "description": "Philips Filament Design System — component mapping, implementation, icon lookup, project scaffolding, and code review for React apps using @filament/react"
+    }
+  ]
+}
